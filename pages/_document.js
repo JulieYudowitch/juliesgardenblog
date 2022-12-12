@@ -8,16 +8,13 @@ export default function Document() {
           <meta property="og:image" content="./gardenssi.webp" />
           <meta
             property="og:url"
-            content="https://julieyudowitchgardenblog.netlify.app"
+            content="https://https://vercelgardenblog.vercel.app/"
           />
           <meta property="og:image:width" content="1200" />
           <meta property="og:image:height" content="645" />
           <meta property="og:image:alt" content="" />
           <meta property="og:type" content="website" />
-          <meta
-            name="description"
-            content="Julie Yudowitch Garden Blog"
-          />
+          <meta name="description" content="Julie Yudowitch Garden Blog" />
           <link rel="icon" href="/favicon.ico" />
           <link rel="apple-touch-icon" href="/logo192.png" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
