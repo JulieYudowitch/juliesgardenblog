@@ -1,11 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import { useSession } from "next-auth/react";
 import React, { useState } from "react";
-import { AiOutlineClose, AiOutlineGif } from "react-icons/ai";
+import { AiOutlineClose } from "react-icons/ai";
 import { BsImage } from "react-icons/bs";
-import { RiBarChart2Line } from "react-icons/ri";
-import { IoCalendarNumberOutline } from "react-icons/io5";
-import { HiOutlineLocationMarker } from "react-icons/hi";
 import {
   addDoc,
   collection,
@@ -94,17 +91,17 @@ export default function Input() {
                 </label>
                 <input type="file" id="file" hidden onChange={addImageToPost} />
                 <div>
-                  <AiOutlineGif />
+                  
                 </div>
-                <RiBarChart2Line />
-                <IoCalendarNumberOutline />
-                <HiOutlineLocationMarker />
+                
+               
+               
               </div>
               <button
                 disabled={!input.trim() && !selectedFile}
                 onClick={sendPost}
               >
-                Tweet
+                Post
               </button>
             </div>
           )}

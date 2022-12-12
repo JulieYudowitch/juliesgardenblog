@@ -16,6 +16,10 @@ padding-bottom: 50px;
     margin: 0;
 }
 
+.user {
+    text-align: center;
+}
+
 @media (prefers-color-scheme: dark) {
     .page {
         background-color: #051412;

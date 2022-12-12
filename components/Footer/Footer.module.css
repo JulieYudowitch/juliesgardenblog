@@ -1,0 +1,36 @@
+.footer {
+    border-top: 0.5px solid grey;
+    color: rgb(227, 238, 242);
+}
+.footContent {   
+    background-color: #313122;
+    padding: 80px;
+}
+
+.socialLinks {
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.socialLink {
+    padding: 20px;    
+}
+
+.copyright {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 800px) {
+   .info {
+       font-size: 16px;
+   } 
+
+   .copyright {
+    font-size: 14px;
+}
+}
+

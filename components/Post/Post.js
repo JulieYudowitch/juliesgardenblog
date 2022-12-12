@@ -6,7 +6,7 @@ import { BsChat } from "react-icons/bs";
 import Moment from "react-moment";
 import { FaRetweet } from "react-icons/fa";
 import { RiDeleteBin5Line } from "react-icons/ri";
-import { AiFillHeart, AiOutlineHeart, AiOutlineShareAlt } from "react-icons/ai";
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { useSession } from "next-auth/react";
 import { AppContext } from "../../context/AppContext";
 import {
@@ -19,6 +19,7 @@ import {
   orderBy,
 } from "firebase/firestore";
 import { db } from "../../firebase";
+import styles from "./Post.module.css"
 
 export default function Post({ id, post }) {
   const [comments, setComments] = useState([]);
@@ -97,7 +98,8 @@ export default function Post({ id, post }) {
           <p>{post?.text}</p>
           <img
             src={post?.image}
-            alt=""
+                      alt=""
+                      className={styles.image}
           />
           <div>
             <div>
@@ -141,8 +143,6 @@ export default function Post({ id, post }) {
                 </span>
               )}
             </div>
-
-            <AiOutlineShareAlt />
           </div>
         </div>
       </div>
