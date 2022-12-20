@@ -2,7 +2,7 @@
 import { useSession, signOut } from 'next-auth/react';
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import Login from '../components/Login';
+import Login from '../components/Login/Login';
 import Feed from '../components/Feed/Feed';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';

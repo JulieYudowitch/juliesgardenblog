@@ -1,5 +1,6 @@
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
+
 export const authOptions = {
   providers: [
     GoogleProvider({
@@ -18,6 +19,8 @@ export const authOptions = {
       return session;
     },
   },
+
+
   secret: process.env.NEXTAUTH_SECRET,
 };
 export default NextAuth(authOptions);

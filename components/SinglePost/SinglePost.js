@@ -43,9 +43,7 @@ const SinglePost = () => {
   return (
     <section>
       <div>
-        <BsArrowLeft
-          onClick={() => router.push(`/`)}
-        />
+        <BsArrowLeft onClick={() => router.push(`/`)} />
         Back
       </div>
 

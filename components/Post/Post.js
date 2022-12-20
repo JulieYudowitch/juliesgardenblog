@@ -74,9 +74,7 @@ export default function Post({ id, post }) {
     console.log("opening model ", appContext.post);
   };
   return (
-    <div
-      onClick={() => router.push(`/${id}`)}
-    >
+    <div>
       <div>
         <div>
           <img
@@ -102,17 +100,7 @@ export default function Post({ id, post }) {
                       className={styles.image}
           />
           <div>
-            <div>
-              <BsChat
-                onClick={(e) => {
-                  e.stopPropagation();
-                  openModal();
-                }}
-              />
-              {comments.length > 0 && (
-                <span>{comments.length}</span>
-              )}
-            </div>
+            
 
             {session.user.uid !== post?.id ? (
               <FaRetweet />
