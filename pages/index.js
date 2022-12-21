@@ -19,7 +19,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <div>
+      <div className={styles.intro}>
         <p className={styles.welcome}>
           Hello and welcome to my gardening blog!
         </p>
@@ -29,6 +29,7 @@ export default function Home() {
         <p className={styles.construction}>
           Please feel free to contribute your own gardening related content!
         </p>
+        <p>Please bear with me while I work out the bugs as this site is still under construction</p>
       </div>
       <div className={styles.user}>
         <img src={session?.user?.image} alt="" className={styles.usersImg} />

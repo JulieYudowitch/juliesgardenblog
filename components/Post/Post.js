@@ -4,7 +4,6 @@ import { useRouter } from "next/router";
 import React, { useContext, useEffect, useState } from "react";
 import { BsChat } from "react-icons/bs";
 import Moment from "react-moment";
-import { FaRetweet } from "react-icons/fa";
 import { RiDeleteBin5Line } from "react-icons/ri";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { useSession } from "next-auth/react";
@@ -77,7 +76,7 @@ export default function Post({ id, post }) {
     <div>
       <div className={styles.post}>
         <div className={styles.poster}>
-          <img className={styles.posterImg} src={session?.user?.image} alt="" />
+          <img className={styles.posterImg} src={post?.userImg} alt="" />
           <h3>{post?.username}</h3>
         </div>
         <p>{post?.text}</p>
