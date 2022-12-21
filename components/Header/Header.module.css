@@ -8,11 +8,12 @@
 }
 
 .title {
-    margin-left: 15px;
+    margin: auto;
 }
 
-.profileIcon {
+.logout {
     margin-right: 15px;
+    cursor: pointer;
 }
 
 @media (prefers-color-scheme: dark) {

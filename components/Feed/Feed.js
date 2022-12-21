@@ -25,14 +25,11 @@ export default function Feed() {
   console.log(posts);
   return (
     <div className={styles.posts}>
-      <div>Home</div>
-      
-        <Input />
-      
+      <Input />
 
       <div>
         {posts.map((post) => (
-          <Post key={post.id} id={post.id} post={post.data()} />
+          <Post className={styles.post} key={post.id} id={post.id} post={post.data()} />
         ))}
       </div>
     </div>

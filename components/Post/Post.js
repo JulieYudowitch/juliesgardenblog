@@ -75,65 +75,41 @@ export default function Post({ id, post }) {
   };
   return (
     <div>
-      <div>
-        <div>
-          <img
-            src={post?.userImg}
-            alt=""
-          />
+      <div className={styles.post}>
+        <div className={styles.poster}>
+          <img className={styles.posterImg} src={session?.user?.image} alt="" />
+          <h3>{post?.username}</h3>
         </div>
+        <p>{post?.text}</p>
+        <img src={post?.image} alt="" className={styles.image} />
+        <p>
+          <Moment fromNow>{post?.timestamp?.toDate()}</Moment>
+        </p>
         <div>
-          <div>
-            <h1>{post?.username}</h1>
-
-            <div>
-              <p>@{post?.tag} &nbsp;·&nbsp;</p>
-              <p>
-                <Moment fromNow>{post?.timestamp?.toDate()}</Moment>
-              </p>
-            </div>
-          </div>
-          <p>{post?.text}</p>
-          <img
-            src={post?.image}
-                      alt=""
-                      className={styles.image}
-          />
-          <div>
-            
-
-            {session.user.uid !== post?.id ? (
-              <FaRetweet />
-            ) : (
-              <RiDeleteBin5Line
-                onClick={(e) => {
-                  e.stopPropagation();
-                  deleteDoc(doc(db, "posts", id));
-                }}
-              />
-            )}
-
-            <div
+          {session.user.uid !== post?.id ? (
+            <p></p>
+          ) : (
+            <RiDeleteBin5Line
               onClick={(e) => {
                 e.stopPropagation();
-                likePost();
+                deleteDoc(doc(db, "posts", id));
               }}
-            >
-              {liked ? (
-                <AiFillHeart />
-              ) : (
-                <AiOutlineHeart />
-              )}
+            />
+          )}
 
-              {likes.length > 0 && (
-                <span>
-                  {likes.length}
-                </span>
-              )}
-            </div>
+          <div
+            onClick={(e) => {
+              e.stopPropagation();
+              likePost();
+            }}
+          >
+            {liked ? <AiFillHeart /> : <AiOutlineHeart />}
+
+            {likes.length > 0 && <span>{likes.length}</span>}
           </div>
         </div>
       </div>
+      <div className={styles.divider}></div>
     </div>
   );
 }

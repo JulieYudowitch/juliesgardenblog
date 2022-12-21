@@ -12,6 +12,7 @@ import {
 } from "firebase/firestore";
 import { getDownloadURL, ref, uploadString } from "firebase/storage";
 import { db, storage } from "../../firebase";
+import styles from './Input.module.css'
 
 export default function Input() {
   const [loading, setLoading] = useState(false);
@@ -53,18 +54,12 @@ export default function Input() {
   };
 
   return (
-    <div>
-      <div>
-        <div>
-          <img
-            src={session?.user?.image}
-            alt=""
-          />
-        </div>
-        <div>
+    
+      
+        <div className={styles.input}>
           <textarea
             rows="2"
-            placeholder="What's Happening?"
+            placeholder="What's Happening in your garden?"
             value={input}
             onChange={(e) => setInput(e.target.value)}
           />
@@ -79,6 +74,7 @@ export default function Input() {
               <img
                 src={selectedFile}
                 alt=""
+                className={styles.selectedFile}
               />
             </div>
           )}
@@ -107,7 +103,7 @@ export default function Input() {
           )}
          
         </div>
-      </div>
-    </div>
+    
+    
   );
 }
