@@ -31,9 +31,9 @@ export default function Home() {
         </p>
       </div>
       <div className={styles.user}>
-        <img src={session?.user?.image} alt="" />
+        <img src={session?.user?.image} alt="" className={styles.usersImg} />
         <div>
-          <h4>Welcome {session?.user?.name}!</h4>
+          <h4 className={styles.info}>You are signed in as {session?.user?.name}</h4>
         </div>
       </div>
       <div className={styles.layout}>
