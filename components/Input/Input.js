@@ -2,7 +2,7 @@
 import { useSession } from "next-auth/react";
 import React, { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
-import { BsImage } from "react-icons/bs";
+import { RxImage } from "react-icons/rx";
 import {
   addDoc,
   collection,
@@ -54,56 +54,44 @@ export default function Input() {
   };
 
   return (
-    
-      
-        <div className={styles.input}>
-          <textarea
-            rows="2"
-            placeholder="What's Happening in your garden?"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-          />
-          {selectedFile && (
-            <div>
-              <div
-                onClick={() => setSelectedFile(null)}
-              >
-                <AiOutlineClose />
-              </div>
+    <div className={styles.inputWrapper}>
+      <div className={styles.input}>
+        <label htmlFor="file">
+          <RxImage className={styles.imgSelect} />
+        </label>
+        <textarea
+          rows="5"
+          placeholder="What's Happening in your garden?"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          className={styles.textInput}
+        />
+      </div>
 
-              <img
-                src={selectedFile}
-                alt=""
-                className={styles.selectedFile}
-              />
-            </div>
-          )}
+      {selectedFile && (
+        <div>
+          <div onClick={() => setSelectedFile(null)}>
+            <AiOutlineClose />
+          </div>
 
-          {!loading && (
-            <div>
-              <div>
-                <label htmlFor="file">
-                  <BsImage />
-                </label>
-                <input type="file" id="file" hidden onChange={addImageToPost} />
-                <div>
-                  
-                </div>
-                
-               
-               
-              </div>
-              <button
-                disabled={!input.trim() && !selectedFile}
-                onClick={sendPost}
-              >
-                Post
-              </button>
-            </div>
-          )}
-         
+          <img src={selectedFile} alt="" className={styles.selectedFile} />
         </div>
-    
-    
+      )}
+
+      {!loading && (
+        <div>
+          <div>
+            <input type="file" id="file" hidden onChange={addImageToPost} />
+          </div>
+          <button
+            className={styles.post}
+            disabled={!input.trim() && !selectedFile}
+            onClick={sendPost}
+          >
+            Post
+          </button>
+        </div>
+      )}
+    </div>
   );
 }

@@ -1,6 +1,20 @@
+.inputWrapper {
+    text-align: center;
+}
 .input {
-    padding: 40px;
+display: block;
 }
 .selectedFile {
     max-width: 50%;
+}
+.textInput {
+    width: 400px;
+}
+.imgSelect {
+ font-size: 25px;
+ cursor: pointer;
+}
+.post {
+    padding: 5px 20px;
+    font-size: large;
 }

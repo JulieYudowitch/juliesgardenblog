@@ -33,6 +33,7 @@ padding-bottom: 50px;
     display: flex;
 }
 
+
 @media (prefers-color-scheme: dark) {
     .page {
         background-color: #051412;
