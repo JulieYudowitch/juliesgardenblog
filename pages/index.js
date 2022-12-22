@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { useSession } from 'next-auth/react';
+import { useSession, signOut } from 'next-auth/react';
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Login from '../components/Login/Login';
@@ -29,13 +29,21 @@ export default function Home() {
         <p className={styles.construction}>
           Please feel free to contribute your own gardening related content!
         </p>
-        <p>Please bear with me while I work out the bugs as this site is still under construction</p>
+        <p>
+          Please bear with me while I work out the bugs as this site is still
+          under construction
+        </p>
       </div>
       <div className={styles.user}>
         <img src={session?.user?.image} alt="" className={styles.usersImg} />
         <div>
-          <h4 className={styles.info}>You are signed in as {session?.user?.name}</h4>
+          <h4 className={styles.info}>
+            You are signed in as {session?.user?.name}
+          </h4>
         </div>
+      </div>
+      <div className={styles.logout} onClick={signOut}>
+        Logout
       </div>
       <div className={styles.layout}>
         <Feed />

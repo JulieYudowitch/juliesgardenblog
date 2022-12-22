@@ -32,6 +32,9 @@ padding-bottom: 50px;
 .layout {
     display: flex;
 }
+.logout {
+    cursor: pointer;
+}
 
 
 @media (prefers-color-scheme: dark) {

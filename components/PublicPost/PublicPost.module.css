@@ -1,0 +1,23 @@
+.post {
+    margin: 20px, 0px;
+    background-color: white;
+}
+
+.image {
+    max-width: 50%;
+}
+
+.poster {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.posterImg {
+    max-height: 40px;
+    border-radius: 50%;
+}
+
+.divider {
+    height: 15px;
+}

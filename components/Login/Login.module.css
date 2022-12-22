@@ -1,5 +1,5 @@
 
-.login {
+.loginmiddleofpage {
    display: flex;
    justify-content: center;
    align-items: center;
@@ -11,6 +11,17 @@
     background-color: white;
     padding: 20px;
     cursor: pointer;
+}
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: white;
+    width: 500px;
+    margin: 30px auto;
+    cursor: pointer;
+    font-size: larger;
 }
 
 .glogo {
