@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import styles from './PublicFeed.module.css'
 import React, { useEffect, useState } from "react";
 import { onSnapshot, collection, query, orderBy } from "firebase/firestore";
