@@ -1,0 +1,21 @@
+
+.login {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: larger;
+   position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.glogo {
+margin: 2px;
+}
+.prompt {
+margin: 2px;
+}
