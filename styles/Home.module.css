@@ -30,7 +30,9 @@ padding-bottom: 50px;
 }
 
 .layout {
-    display: flex;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+
 }
 .logout {
     cursor: pointer;
