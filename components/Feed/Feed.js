@@ -22,15 +22,14 @@ export default function Feed() {
       ),
     [db]
   );
-  console.log(posts);
+  
   return (
     <div className={styles.feed}>
       <Input />
-      <div className={styles.posts}>
+      <div>
        
           {posts.map((post) => (
             <Post
-              className={styles.post}
               key={post.id}
               id={post.id}
               post={post.data()}

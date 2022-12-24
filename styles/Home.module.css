@@ -1,36 +1,54 @@
-.page {
-padding-bottom: 50px;
-
+.homePage {
+  padding-bottom: 50px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas:
+   
+    "intro intro"
+    "user user"
+    "feed side"
+    "feed side"
+    ;
 }
+.header {
+  grid-area: head;
+}
+
 .welcome {
-    text-align: center;
-    padding: 20px;
-    padding-bottom: 0;
-    font-weight: bold;
-    font-size: 30px;
-    margin: 0;
+  text-align: center;
+  padding: 20px;
+  padding-bottom: 0;
+  font-weight: bold;
+  font-size: 30px;
+  margin: 0;
 }
 
 .intro {
-    text-align: center;
+  grid-area: intro;
 }
 
 .user {
-    display: flex;
-    margin: 20px;
-    align-items: center;
-}
-.usersImg {
-    border-radius: 50%;
-    margin-right: 15px;
+  display: flex;
+  margin: 20px;
+  align-items: center;
+  grid-area: user;
 }
 
-.layout {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-}
 .logout {
-    cursor: pointer;
+  cursor: pointer;
 }
 
+.usersImg {
+  border-radius: 50%;
+  margin-right: 15px;
+}
 
+.feed {
+  grid-area: feed;
+}
+.sidebar {
+  grid-area: side;
+}
+.footer {
+  grid-area: foot;
+}
