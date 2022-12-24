@@ -16,6 +16,13 @@ a {
 }
 
 
+@media (prefers-color-scheme: dark) {
+  .body {
+    background-color: #051412;
+    color: rgb(227, 238, 242);
+  }
+}
+
 @media (max-width: 1000px) {
-  
+
 }

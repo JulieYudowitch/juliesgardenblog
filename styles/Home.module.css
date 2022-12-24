@@ -32,16 +32,10 @@ padding-bottom: 50px;
 .layout {
     display: grid;
     grid-template-columns: 3fr 1fr;
-
+max-width: 100%;
 }
 .logout {
     cursor: pointer;
 }
 
 
-@media (prefers-color-scheme: dark) {
-    .page {
-        background-color: #051412;
-        color: rgb(227, 238, 242);
-    }
-}
