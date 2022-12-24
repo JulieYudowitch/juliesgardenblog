@@ -9,25 +9,22 @@
     ;
 }
 
-
-.welcome {
+.intro {
+  grid-area: intro;
   text-align: center;
   padding: 20px;
   padding-bottom: 0;
-  font-weight: bold;
-  font-size: 30px;
   margin: 0;
-}
-
-.intro {
-  grid-area: intro;
+  background-color: white;
 }
 
 .user {
-  display: flex;
   margin: 20px;
-  align-items: center;
   grid-area: user;
+}
+.userNameImg {
+    display: flex;
+    align-items: center;
 }
 
 .logout {
@@ -44,6 +41,7 @@
 }
 .sidebar {
   grid-area: side;
+  background-color: rgb(246, 247, 140);
 }
 
 

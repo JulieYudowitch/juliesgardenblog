@@ -32,8 +32,12 @@ export default function Home() {
           </p>
         </div>
         <div className={styles.user}>
-          <img src={session?.user?.image} alt="" className={styles.usersImg} />
-          <div>
+          <div className={styles.userNameImg}>
+            <img
+              src={session?.user?.image}
+              alt=""
+              className={styles.usersImg}
+            />
             <h4 className={styles.loggedInAs}>
               You are signed in as {session?.user?.name}
             </h4>
