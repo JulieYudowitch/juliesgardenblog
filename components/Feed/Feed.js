@@ -24,18 +24,12 @@ export default function Feed() {
   );
   
   return (
-    <div className={styles.feed}>
+    <div>
       <Input />
-      <div>
-       
-          {posts.map((post) => (
-            <Post
-              key={post.id}
-              id={post.id}
-              post={post.data()}
-            />
-          ))}
-        
+      <div className={styles.feed}>
+        {posts.map((post) => (
+          <Post key={post.id} id={post.id} post={post.data()} />
+        ))}
       </div>
     </div>
   );
