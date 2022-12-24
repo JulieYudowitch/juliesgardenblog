@@ -1,20 +1,11 @@
 .header {
     background-color: #0d3f36;
     color: rgb(227, 238, 242);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     font-family: "Source Sans Pro", sans-serif;
+    padding: 10px;
+    text-align: center;
 }
 
-.title {
-    margin: auto;
-}
-
-.logout {
-    margin-right: 15px;
-    cursor: pointer;
-}
 
 @media (prefers-color-scheme: dark) {
     .header {

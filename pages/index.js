@@ -20,13 +20,9 @@ export default function Home() {
       </Head>
       <Header />
       <div className={styles.intro}>
-        <p className={styles.welcome}>
-          Hello and welcome to my gardening blog!
-        </p>
-        <p className={styles.construction}>
-          This is a place to celebrate all things plants.
-        </p>
-        <p className={styles.construction}>
+        <h2>Hello and welcome to my gardening blog!</h2>
+        <h3>This is a place to celebrate all things plants.</h3>
+        <p>
           Please feel free to contribute your own gardening related content!
         </p>
         <p>
@@ -41,10 +37,11 @@ export default function Home() {
             You are signed in as {session?.user?.name}
           </h4>
         </div>
+        <div className={styles.logout} onClick={signOut}>
+          Logout
+        </div>
       </div>
-      <div className={styles.logout} onClick={signOut}>
-        Logout
-      </div>
+
       <div className={styles.layout}>
         <Feed />
         <Sidebar />

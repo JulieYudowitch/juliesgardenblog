@@ -1,8 +1,14 @@
 .inputWrapper {
+    padding:  30px 0px;
     text-align: center;
+    border: 1px solid black;
+    margin: 40px 20px;
 }
 .input {
-display: block;
+display: flex;
+justify-content: center;
+align-items: center;
+
 }
 .selectedFile {
     max-width: 50%;
@@ -10,8 +16,12 @@ display: block;
 .textInput {
     width: 400px;
 }
+
+.textInput::placeholder {
+font-size: 18px;
+}
 .imgSelect {
- font-size: 25px;
+ font-size: 30px;
  cursor: pointer;
 }
 .post {

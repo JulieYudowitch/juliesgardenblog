@@ -10,11 +10,7 @@ padding-bottom: 50px;
     font-size: 30px;
     margin: 0;
 }
-.construction {
-    text-align: center;
-    font-size: 25px;
-    margin: 0;
-}
+
 .intro {
     text-align: center;
 }
@@ -32,7 +28,6 @@ padding-bottom: 50px;
 .layout {
     display: grid;
     grid-template-columns: 3fr 1fr;
-max-width: 100%;
 }
 .logout {
     cursor: pointer;
