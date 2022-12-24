@@ -2,17 +2,13 @@
   padding-bottom: 50px;
   display: grid;
   grid-template-columns: 3fr 1fr;
-  grid-template-areas:
-   
+  grid-template-areas:   
     "intro intro"
     "user user"
     "feed side"
-    "feed side"
     ;
 }
-.header {
-  grid-area: head;
-}
+
 
 .welcome {
   text-align: center;
@@ -49,6 +45,15 @@
 .sidebar {
   grid-area: side;
 }
-.footer {
-  grid-area: foot;
+
+
+@media (max-width: 800px) {
+.homePage {
+    grid-template-areas:   
+    "intro intro"
+    "user user"
+    "feed feed"
+    "side side"
+    ;
+}
 }

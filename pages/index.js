@@ -42,8 +42,12 @@ export default function Home() {
             Logout
           </div>
         </div>
-        <Feed className={styles.feed} />
-        <Sidebar className={styles.sidebar} />
+        <div className={styles.feed}>
+          <Feed />
+        </div>
+        <div className={styles.sidebar}>
+          <Sidebar />
+        </div>
       </div>
       <Footer />
     </div>
