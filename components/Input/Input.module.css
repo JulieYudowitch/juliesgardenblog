@@ -6,7 +6,7 @@
 .input {
 display: flex;
 justify-content: center;
-align-items: center;
+align-items: top;
 
 }
 .selectedFile {
@@ -22,7 +22,7 @@ align-items: center;
 font-size: 18px;
 }
 .imgSelect {
- font-size: 30px;
+ font-size: 35px;
  cursor: pointer;
  color: #0d3f36;
 }
