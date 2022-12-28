@@ -7,9 +7,11 @@ import Feed from '../components/Feed/Feed';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import Sidebar from '../components/Sidebar/Sidebar';
+import TestFeed from '../components/TestFeed/TestFeed';
+
 
 export default function Home() {
-  const { data: session } = useSession()
+  const { data: session } = useSession();
   if(!session) return <Login />
   return (
     <div>
@@ -19,6 +21,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
+      
       <div className={styles.homePage}>
         <div className={styles.intro}>
           <h2>Hello and welcome to my gardening blog!</h2>

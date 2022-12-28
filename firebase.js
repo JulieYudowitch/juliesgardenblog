@@ -3,6 +3,7 @@ import { getAuth } from 'firebase/auth';
 import firebase from "firebase/firestore";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from 'firebase/storage'
+import "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_PUBLIC_API_KEY,

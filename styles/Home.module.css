@@ -29,6 +29,9 @@
 
 .logout {
   cursor: pointer;
+  text-align: right;
+  margin-right: 30px;
+  font-weight: bold;
 }
 
 .usersImg {

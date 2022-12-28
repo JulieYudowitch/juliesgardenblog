@@ -24,8 +24,19 @@ font-size: 18px;
 .imgSelect {
  font-size: 30px;
  cursor: pointer;
+ color: #0d3f36;
 }
 .post {
     padding: 5px 20px;
     font-size: large;
+    
+}
+.post:active {
+background-color: #0d3f36;
+}
+
+@media (max-width: 800px) {
+    .textInput::placeholder {
+font-size: 16px;
+}
 }

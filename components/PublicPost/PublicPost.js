@@ -33,19 +33,12 @@ export default function PublicPost({ id, post }) {
         query(
           collection(db, "posts", id, "comments"),
           orderBy("timestamp", "desc"),
-          limit(5)
         ),
         (snapshot) => setComments(snapshot.docs)
       ),
     [db, id]
   );
-  useEffect(
-    () =>
-      onSnapshot(collection(db, "posts", id, "likes"), (snapshot) =>
-        setLikes(snapshot.docs)
-      ),
-    [db, id]
-  );
+
 
   return (
     <div>
