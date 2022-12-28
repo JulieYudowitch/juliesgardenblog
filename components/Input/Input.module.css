@@ -31,12 +31,10 @@ font-size: 18px;
     font-size: large;
     
 }
-.post:active {
-background-color: #0d3f36;
-}
+
 
 @media (max-width: 800px) {
     .textInput::placeholder {
-font-size: 16px;
+font-size: 14px;
 }
 }
