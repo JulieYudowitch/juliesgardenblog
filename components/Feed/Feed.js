@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
-import { onSnapshot, collection, query, orderBy } from "firebase/firestore";
+import { onSnapshot, collection, query, orderBy, limit } from "firebase/firestore";
 import { db } from "../../firebase";
 import styles from "./Feed.module.css";
 import Input from "../Input/Input";
@@ -15,7 +15,7 @@ export default function Feed() {
   useEffect(
     () =>
       onSnapshot(
-        query(collection(db, "posts"), orderBy("timestamp", "desc")),
+        query(collection(db, "posts"), orderBy("timestamp", "desc"), limit(20)),
         (snapshot) => {
           setPosts(snapshot.docs);
         }

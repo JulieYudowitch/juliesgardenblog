@@ -7,8 +7,6 @@ import Feed from '../components/Feed/Feed';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import Sidebar from '../components/Sidebar/Sidebar';
-import TestFeed from '../components/TestFeed/TestFeed';
-
 
 export default function Home() {
   const { data: session } = useSession();
@@ -27,11 +25,9 @@ export default function Home() {
           <h2>Hello and welcome to my gardening blog!</h2>
           <h3>This is a place to celebrate all things plants.</h3>
           <p>
-            Please feel free to contribute your own gardening related content!
-          </p>
-          <p>
-            Please bear with me while I work out the bugs as this site is still
-            under construction
+            Please feel free to contribute your own gardening related content!       
+            And please bear with me while I work out the bugs as this site is still
+            under construction.
           </p>
         </div>
         <div className={styles.user}>

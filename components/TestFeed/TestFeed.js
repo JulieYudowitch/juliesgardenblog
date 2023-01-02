@@ -1,47 +1,44 @@
-import styles from './TestFeed.module.css'
+import styles from "./TestFeed.module.css";
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
-import { onSnapshot, collection, query, orderBy, limit, startAfter, getDocs } from "firebase/firestore";
+import {
+  onSnapshot,
+  collection,
+  query,
+  orderBy,
+  limit,
+  startAfter,
+  getDocs
+} from "firebase/firestore";
 import { db } from "../../firebase";
-import TestPost from '../../services/TestPost'
+import TestPost from '../TestPost/TestPost'
 
-export default function PublicFeed() {
-  
-  
-const [postNum, setPostNum] = useState(null)
+export default function TestFeed() {
   const [posts, setPosts] = useState([]);
-  const first = query(
-    collection(db, "posts"),
-    orderBy("desc"),
-    limit(3)
-  );
+  const first = query(collection(db, "posts"), orderBy("desc"), limit(3));
+  const documentSnapshot = async () => {
+    await getDocs(first)
+    const lastVisible = documentSnapshot.docs[documentSnapshot.docs.length - 1];
+  } 
 
-  const next = query(collection(db, "posts"), orderBy("desc"), limit(3));
-
-  const documentSnapshots = getDocs(first);
-    
-  /*useEffect(
+  
+  useEffect(
     () =>
       onSnapshot(
-        query(collection(db, "posts"), orderBy("timestamp", "desc")),
+        query(collection(db, "posts"), orderBy("timestamp", "desc"), limit(3)),
         (snapshot) => {
-            setPosts(snapshot.docs);
-            setPostNum();
+          setPosts(snapshot.docs)
         }
       ),
     [db]
   );
-  
-    const nextQuery = () => {
-onSnapshot(
-  query(collection(db, "posts"), orderBy("timestamp", "desc"), startAfter(posts)),
-  (snapshot) => {
-      setPosts(snapshot.docs);
-      setPostNum(documentSnapshots.docs[documentSnapshots.docs.length-1]);
-  }
-);
-    }*/
-    
+  const nextPosts = () => {
+     query(collection(db, "posts"), orderBy("timestamp", "desc"), startAfter(lastVisible), limit(3)),
+        (snapshot) => {
+          setPosts(snapshot.docs)
+        }
+   }
+
   return (
     <div className={styles.feed}>
       <p>test feed</p>
@@ -55,8 +52,8 @@ onSnapshot(
           />
         ))}
       </div>
-      
-          <button onClick={next}>next posts</button>
+
+      <button onClick={nextPosts}>next posts</button>
     </div>
   );
 }

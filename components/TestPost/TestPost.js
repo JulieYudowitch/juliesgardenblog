@@ -16,12 +16,12 @@ import {
   query,
   collection,
   orderBy,
-  limit
+  limit,
 } from "firebase/firestore";
 import { db } from "../../firebase";
-import styles from "./Post.module.css"
+import styles from "./TestPost.module.css";
 
-export default function Post({ id, post }) {
+export default function TestPost({ id, post }) {
   const [comments, setComments] = useState([]);
   const [likes, setLikes] = useState([]);
   const [liked, setLiked] = useState(false);
@@ -29,17 +29,17 @@ export default function Post({ id, post }) {
   const { data: session } = useSession();
   console.log(post.userImg);
   const router = useRouter();
-  useEffect(
+  /*useEffect(
     () =>
       onSnapshot(
         query(
           collection(db, "posts", id, "comments"),
-          orderBy("timestamp", "desc"), limit(20)
+          orderBy("timestamp", "desc")
         ),
         (snapshot) => setComments(snapshot.docs)
       ),
     [db, id]
-  );
+  );*/
   useEffect(
     () =>
       onSnapshot(collection(db, "posts", id, "likes"), (snapshot) =>
