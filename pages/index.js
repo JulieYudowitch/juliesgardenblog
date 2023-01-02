@@ -19,18 +19,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      
+
       <div className={styles.homePage}>
-        <div className={styles.intro}>
-          <h2>Hello and welcome to my gardening blog!</h2>
-          <h3>This is a place to celebrate all things plants.</h3>
-          <p>
-            Please feel free to contribute your own gardening related content!       
-            And please bear with me while I work out the bugs as this site is still
-            under construction.
-          </p>
-        </div>
         <div className={styles.user}>
+          <h2>Hello and welcome to my gardening blog!</h2>
           <div className={styles.userNameImg}>
             <img
               src={session?.user?.image}
@@ -44,6 +36,9 @@ export default function Home() {
           <div className={styles.logout} onClick={signOut}>
             Logout
           </div>
+          <p>
+            Please feel free to contribute your own gardening related content!
+          </p>
         </div>
         <div className={styles.feed}>
           <Feed />

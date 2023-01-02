@@ -14,12 +14,6 @@ export default function Login() {
         Hello and welcome to my gardening blog!
       </h2>
       <h3 className={styles.loginPrompt}>
-        This is a place to celebrate all things plants.
-      </h3>
-      <p className={styles.loginPrompt}>
-        Please bear with me as this site is still under construction
-      </p>
-      <h3 className={styles.loginPrompt}>
         Login to post your own garden related content
       </h3>
       <div className={styles.login} onClick={() => signIn("google")}>

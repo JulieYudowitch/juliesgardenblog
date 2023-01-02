@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import styles from './PublicFeed.module.css'
 import React, { useEffect, useState } from "react";
-import { onSnapshot, collection, query, orderBy } from "firebase/firestore";
+import { onSnapshot, collection, query, orderBy, limit } from "firebase/firestore";
 import { db } from "../../firebase";
 import PublicPost from "../PublicPost/PublicPost";
 
@@ -14,7 +14,7 @@ export default function PublicFeed() {
   useEffect(
     () =>
       onSnapshot(
-        query(collection(db, "posts"), orderBy("timestamp", "desc")),
+        query(collection(db, "posts"), orderBy("timestamp", "desc"), limit(20)),
         (snapshot) => {
           setPosts(snapshot.docs);
         }

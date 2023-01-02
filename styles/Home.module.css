@@ -9,18 +9,11 @@
     ;
 }
 
-.intro {
-  grid-area: intro;
-  text-align: center;
-  padding: 20px;
-  padding-bottom: 0;
-  margin: 0;
-  background-color: white;
-}
-
 .user {
   margin: 20px;
   grid-area: user;
+  background-color: white;
+  padding: 15px;
 }
 .userNameImg {
     display: flex;
