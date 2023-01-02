@@ -20,6 +20,12 @@
     align-items: center;
 }
 
+.welcomeAndLogout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .logout {
   cursor: pointer;
   text-align: right;
