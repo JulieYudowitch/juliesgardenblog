@@ -85,7 +85,7 @@ export default function Post({ id, post }) {
         <p>
           <Moment fromNow>{post?.timestamp?.toDate()}</Moment>
         </p>
-        <div>
+        <div className={styles.likeEdit}>
           {session.user.uid !== post?.id ? (
             <p></p>
           ) : (

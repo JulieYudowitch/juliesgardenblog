@@ -1,5 +1,5 @@
 .post {
-    margin: 20px, 0px;            
+    padding: 15px;          
     background-color: white;
 }
 .image {
@@ -16,4 +16,9 @@
 }
 .divider {
     height: 15px;
+}
+.likeEdit {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
