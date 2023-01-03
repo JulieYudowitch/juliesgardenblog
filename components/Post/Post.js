@@ -90,6 +90,7 @@ export default function Post({ id, post }) {
             <p></p>
           ) : (
             <RiDeleteBin5Line
+              fontSize={22}
               onClick={(e) => {
                 e.stopPropagation();
                 deleteDoc(doc(db, "posts", id));
@@ -98,12 +99,17 @@ export default function Post({ id, post }) {
           )}
 
           <div
+            className={styles.likeCount}
             onClick={(e) => {
               e.stopPropagation();
               likePost();
             }}
           >
-            {liked ? <AiFillHeart /> : <AiOutlineHeart />}
+            {liked ? (
+              <AiFillHeart fontSize={22} />
+            ) : (
+              <AiOutlineHeart fontSize={22} />
+            )}
 
             {likes.length > 0 && <span>{likes.length}</span>}
           </div>

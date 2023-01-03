@@ -32,7 +32,7 @@ export default function PublicPost({ id, post }) {
       onSnapshot(
         query(
           collection(db, "posts", id, "comments"),
-          orderBy("timestamp", "desc"),
+          orderBy("timestamp", "desc"), limit(20)
         ),
         (snapshot) => setComments(snapshot.docs)
       ),

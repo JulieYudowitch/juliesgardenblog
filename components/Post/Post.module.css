@@ -21,4 +21,10 @@
     display: flex;
     justify-content: center;
     gap: 20px;
+    cursor: pointer;
+}
+.likeCount {
+display: flex;
+font-size: 20px;
+align-items: center;
 }
