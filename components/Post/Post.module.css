@@ -9,6 +9,7 @@
     display: flex;
     justify-content:center;
     align-items: center;
+    gap: 10px;
 }
 .posterImg {
     max-height: 40px;
