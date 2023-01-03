@@ -60,7 +60,7 @@ export default function Input() {
           <RxImage className={styles.imgSelect} />
         </label>
         <textarea
-          rows="2"
+          rows="3"
           placeholder="What's Happening in your garden?"
           value={input}
           onChange={(e) => setInput(e.target.value)}

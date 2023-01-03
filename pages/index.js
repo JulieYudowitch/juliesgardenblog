@@ -37,9 +37,9 @@ export default function Home() {
               alt=""
               className={styles.usersImg}
             />
-            <h4 className={styles.loggedInAs}>
+            <h3 className={styles.loggedInAs}>
               You are signed in as {session?.user?.name}
-            </h4>
+            </h3>
           </div>
         </div>
         <div className={styles.feed}>

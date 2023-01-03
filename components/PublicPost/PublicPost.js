@@ -19,6 +19,7 @@ import {
   limit,
 } from "firebase/firestore";
 import { db } from "../../firebase";
+import { signIn } from "next-auth/react";
 
 export default function PublicPost({ id, post }) {
   const [comments, setComments] = useState([]);
@@ -63,7 +64,7 @@ export default function PublicPost({ id, post }) {
             className={styles.likeCount}
             onClick={(e) => {
               e.stopPropagation();
-              likePost();
+              signIn("google");
             }}
           >
             {liked ? <AiFillHeart /> : <AiOutlineHeart />}
