@@ -4,11 +4,11 @@
 }
 .footContent {   
     background-color: #313122;
-    padding: 80px;
+    padding-bottom: 20px;
 }
 
 .socialLinks {
-    padding: 30px;
+    padding: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -22,6 +22,7 @@
     font-size: 20px;
     display: flex;
     justify-content: center;
+    margin: 0;
 }
 
 @media (max-width: 800px) {
@@ -31,6 +32,11 @@
 
    .copyright {
     font-size: 14px;
+}
+}
+@media (max-width: 300px) {
+     .copyright {
+    font-size: 10px;
 }
 }
 
