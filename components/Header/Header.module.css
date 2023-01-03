@@ -3,9 +3,8 @@
     color: rgb(227, 238, 242);
     font-family: "Source Sans Pro", sans-serif;
     padding: 10px;
-    text-align: center;
+    text-align: center;   
 }
-
 
 @media (prefers-color-scheme: dark) {
     .header {

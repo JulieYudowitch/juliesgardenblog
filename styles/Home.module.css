@@ -44,6 +44,9 @@
 .sidebar {
   grid-area: side;
   background-color: rgb(246, 247, 140);
+  margin-right: 20px;
+  padding: 10px;
+  text-align: center;
 }
 
 

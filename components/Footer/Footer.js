@@ -2,8 +2,9 @@ import styles from "../Footer/Footer.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
+  faGithub,
   faInstagram,
-  faTiktok,
+  faLinkedin,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/dist/client/link";
@@ -15,7 +16,7 @@ function Footer() {
       <div className={styles.footContent}>
         <div className={styles.socialLinks}>
           <a
-            href="https://www.instagram.com/julieyudowitch"
+            href="https://www.facebook.com/Julieyudowitch"
             passHref
             className={styles.navlink}
             target="blank"
@@ -24,7 +25,35 @@ function Footer() {
             <FontAwesomeIcon
               className={styles.socialLink}
               color="rgb(227, 238, 242)"
-              icon={faInstagram}
+              icon={faFacebook}
+              size="2x"
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/julie-yudowitch-041645208"
+            passHref
+            className={styles.navlink}
+            target="blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon
+              className={styles.socialLink}
+              color="rgb(227, 238, 242)"
+              icon={faLinkedin}
+              size="2x"
+            />
+          </a>
+          <a
+            href="https://github.com/JulieYudowitch"
+            passHref
+            className={styles.navlink}
+            target="blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon
+              className={styles.socialLink}
+              color="rgb(227, 238, 242)"
+              icon={faGithub}
               size="2x"
             />
           </a>
@@ -43,7 +72,7 @@ function Footer() {
             />
           </a>
           <a
-            href="https://www.tiktok.com/@julie_yudowitch"
+            href="https://www.instagram.com/julieyudowitch"
             passHref
             className={styles.navlink}
             target="blank"
@@ -52,7 +81,7 @@ function Footer() {
             <FontAwesomeIcon
               className={styles.socialLink}
               color="rgb(227, 238, 242)"
-              icon={faTiktok}
+              icon={faInstagram}
               size="2x"
             />
           </a>

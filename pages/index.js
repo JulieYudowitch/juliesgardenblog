@@ -23,7 +23,10 @@ export default function Home() {
       <div className={styles.homePage}>
         <div className={styles.user}>
           <div className={styles.welcomeAndLogout}>
-            <h2>Hello and welcome to my gardening blog!</h2>
+            
+              <h2>Hello and welcome to my gardening blog!</h2>
+          
+
             <div className={styles.logout} onClick={signOut}>
               Logout
             </div>
@@ -38,10 +41,6 @@ export default function Home() {
               You are signed in as {session?.user?.name}
             </h4>
           </div>
-
-          <p>
-            Please feel free to contribute your own gardening related content!
-          </p>
         </div>
         <div className={styles.feed}>
           <Feed />

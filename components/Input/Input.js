@@ -69,8 +69,11 @@ export default function Input() {
       </div>
 
       {selectedFile && (
-        <div>
-          <div onClick={() => setSelectedFile(null)}>
+        <div className={styles.selectedFileWrapper}>
+          <div
+            className={styles.deleteSelectFile}
+            onClick={() => setSelectedFile(null)}
+          >
             <AiOutlineClose />
           </div>
 
