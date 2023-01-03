@@ -38,7 +38,13 @@ export default function PublicPost({ id, post }) {
       ),
     [db, id]
   );
-
+ useEffect(
+   () =>
+     onSnapshot(collection(db, "posts", id, "likes"), (snapshot) =>
+       setLikes(snapshot.docs)
+     ),
+   [db, id]
+ );
 
   return (
     <div>
@@ -53,7 +59,8 @@ export default function PublicPost({ id, post }) {
           <Moment fromNow>{post?.timestamp?.toDate()}</Moment>
         </p>
         <div>
-                  <div
+          <div
+            className={styles.likeCount}
             onClick={(e) => {
               e.stopPropagation();
               likePost();
