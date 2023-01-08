@@ -70,4 +70,7 @@
 .welcomeAndLogout h2 {
   font-size: 20px;
 }
+.logout {
+  margin-right: 5px;
+}
 }
