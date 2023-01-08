@@ -23,14 +23,16 @@
 .welcomeAndLogout {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: top;
 }
+
 
 .logout {
   cursor: pointer;
   text-align: right;
   margin-right: 30px;
   font-weight: bold;
+  max-height: 30px;
 }
 
 .usersImg {
@@ -61,5 +63,11 @@
 }
 .sidebar {
   margin: 20px;
+}
+}
+
+@media (max-width: 500px) {
+.welcomeAndLogout h2 {
+  font-size: 20px;
 }
 }

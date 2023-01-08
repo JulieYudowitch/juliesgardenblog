@@ -1,13 +1,12 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @next/next/no-img-element */
-import { useRouter } from "next/router";
 import React, { useContext, useEffect, useState } from "react";
+import { AppContext } from "../../context/AppContext";
 import { BsChat } from "react-icons/bs";
 import Moment from "react-moment";
 import { RiDeleteBin5Line } from "react-icons/ri";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { useSession } from "next-auth/react";
-import { AppContext } from "../../context/AppContext";
 import {
   deleteDoc,
   setDoc,
@@ -16,25 +15,27 @@ import {
   query,
   collection,
   orderBy,
-  limit
+    limit,
+  addDoc
 } from "firebase/firestore";
 import { db } from "../../firebase";
-import styles from "./Post.module.css"
+import styles from "./TestPost2.module.css";
 
-export default function Post({ id, post }) {
-  const [comments, setComments] = useState([]);
+export default function TestPost2({ id, post }) {
+    const [isReplying, setIsReplying] = useState(false)
+    const [comments, setComments] = useState([]);
+    const [appContext, setAppContext] = useContext(AppContext);
   const [likes, setLikes] = useState([]);
   const [liked, setLiked] = useState(false);
-  const [appContext, setAppContext] = useContext(AppContext);
   const { data: session } = useSession();
   console.log(post.userImg);
-  const router = useRouter();
   useEffect(
     () =>
       onSnapshot(
         query(
           collection(db, "posts", id, "comments"),
-          orderBy("timestamp", "desc"), limit(20)
+          orderBy("timestamp", "desc"),
+          limit(20)
         ),
         (snapshot) => setComments(snapshot.docs)
       ),
@@ -62,18 +63,31 @@ export default function Post({ id, post }) {
         username: session.user.name,
       });
     }
-  };
-  const openModal = () => {
-    setAppContext({
-      ...appContext,
-      isModalOpen: true,
-      post,
-      postId: id,
-    });
+    };
 
-    console.log("opening model ", appContext.post);
-  };
-  
+    const reply = () => {
+        setIsReplying(true)
+        console.log(isReplying)
+        addReply()
+
+    }
+
+    const addReply = async (e) => {
+    
+        await addDoc(collection(db, "comments"), {
+          id: session.user.uid,
+          comment: input,
+          username: session.user.name,
+          tag: session.user.tag,
+          userImg: session.user.image,
+          timestamp: serverTimestamp(),
+        });
+
+      
+      setInput("");
+
+    };
+
   return (
     <div>
       <div className={styles.post}>
@@ -114,15 +128,13 @@ export default function Post({ id, post }) {
 
             {likes.length > 0 && <span>{likes.length}</span>}
           </div>
-          {/*<BsChat
+          <BsChat
             fontSize={21}
-            onClick={(e) => {
-              e.stopPropagation();
-              openModal();
-            }}
-          />*/}
+                      onClick={reply}
+                
+          />
         </div>
-        <div></div>
+              {isReplying && <div>Reply here</div>}
       </div>
       <div className={styles.divider}></div>
     </div>

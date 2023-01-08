@@ -1,0 +1,31 @@
+.post {
+    padding: 15px;          
+    background-color: white;
+}
+.image {
+    max-width: 50%;
+}
+.poster {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 10px;
+}
+.posterImg {
+    max-height: 40px;
+    border-radius: 50%;
+}
+.divider {
+    height: 15px;
+}
+.likeEdit {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    cursor: pointer;
+}
+.likeCount {
+display: flex;
+font-size: 20px;
+align-items: center;
+}

@@ -34,7 +34,7 @@
     font-size: 14px;
 }
 }
-@media (max-width: 300px) {
+@media (max-width: 350px) {
      .copyright {
     font-size: 10px;
 }
